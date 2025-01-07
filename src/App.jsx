@@ -30,6 +30,7 @@ function App() {
       }
     } catch (error) {
       console.error(error.message);
+      setData({});
       alert("Failed to fetch weather data");
       setLoading(false);
     }
@@ -42,7 +43,7 @@ function App() {
         <button onClick={fetchData}>Search</button>
       </div>
       {loading ? (
-        <div className="cardContainer">Data Loading...</div>
+        <p className="cardContainer">Data Loading...</p>
       ) : Object.keys(data).length === 0? "" : (
         <div className="cardContainer">
           <div className="card">
