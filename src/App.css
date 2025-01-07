@@ -1,0 +1,43 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color:rgb(212, 246, 252)
+}
+
+button{
+  margin: 0;
+  background-color:rgb(71, 139, 70);
+  color: white;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+input{
+  margin: 0;
+  height: 35px;
+  width: 300px;
+}
+
+.cardContainer{
+  margin-top: 50px;
+display: flex;
+justify-content: center;
+gap: 30px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+width: 200px;
+height: 90px;
+border-radius: 5px;
+border: 1px solid rgb(172, 172, 172);
+background-color: white;
+h3{
+  margin:0;
+}
+
+}
