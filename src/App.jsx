@@ -43,22 +43,22 @@ function App() {
         <button onClick={fetchData}>Search</button>
       </div>
       {loading ? (
-        <p className="cardContainer">Data Loading...</p>
+        <p className="weather-cards">Data Loading...</p>
       ) : Object.keys(data).length === 0? "" : (
-        <div className="cardContainer">
-          <div className="card">
+        <div className="weather-cards">
+          <div className="weather-card">
             <h3>Temperature</h3>
             <div>{data.current.temp_c}&deg;C</div>
           </div>
-          <div className="card">
+          <div className="weather-card">
             <h3>Humidity</h3>
             <div>{data.current.humidity};%</div>
           </div>
-          <div className="card">
+          <div className="weather-card">
             <h3>Condition</h3>
             <div>{data.current.condition.text}</div>
           </div>
-          <div className="card">
+          <div className="weather-card">
             <h3>Wind Speed</h3>
             <div>{data.current.wind_kph} kph</div>
           </div>
