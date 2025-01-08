@@ -36,7 +36,7 @@ function App() {
         <button onClick={fetchData}>Search</button>
       </div>
       {loading ? (
-        <p >Data loading...</p>
+        <p className="weather-cards">Loading data...</p>
       ) : Object.keys(data).length === 0? "" : (
         <div className="weather-cards">
           <div className="weather-card">
