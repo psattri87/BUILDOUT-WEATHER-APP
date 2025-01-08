@@ -14,18 +14,12 @@ function App() {
   const key = "2292257936f54ffabcc90836230112";
 
   async function fetchData() {
-    console.log("key", key);
-    console.log("city", inputValue);
     const url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${inputValue}`;
     setLoading(true);
     try {
       const response = await axios.get(url);
       if (response.status === 200) {
-        console.log(response.data);
         setData(response.data);
-      } else {
-        console.log();
-        console.log("status:" + response.status);
       }
     } catch (error) {
       console.error(error.message);
@@ -42,7 +36,7 @@ function App() {
         <button onClick={fetchData}>Search</button>
       </div>
       {loading ? (
-        <p className="weather-cards">Data loading...</p>
+        <p >Data loading...</p>
       ) : Object.keys(data).length === 0? "" : (
         <div className="weather-cards">
           <div className="weather-card">
